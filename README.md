@@ -70,61 +70,91 @@ Usage examples:
 /QUIT :Goodbye!
 ```
 
-## TODO List
+## Program Flow
 
-1. Network Setup
-   - [ ] Implement socket creation and binding
-   - [ ] Set up listening for incoming connections
-   - [ ] Handle client connections using select() or poll()
+Here's a high-level overview of how the program should flow:
 
-2. Client Handling
-   - [ ] Implement client data structure
-   - [ ] Manage client authentication
-   - [ ] Handle client disconnections
+1. Server Initialization
+   - Create and bind socket
+   - Set socket to non-blocking mode
+   - Start listening for connections
 
-3. Message Parsing
-   - [ ] Develop a robust parser for IRC messages
-   - [ ] Implement command recognition
+2. Main Event Loop
+   - Use select() or poll() for non-blocking I/O
+   - Accept new client connections
+   - Receive data from existing clients
+   - Parse received messages
+   - Route messages to appropriate command handlers
+   - Send responses back to clients
 
-4. Command Implementation
-   - [ ] NICK command
-   - [ ] USER command
-   - [ ] JOIN command
-   - [ ] PART command
-   - [ ] PRIVMSG command
-   - [ ] QUIT command
-   - [ ] MODE command
-   - [ ] TOPIC command
-   - [ ] LIST command
-   - [ ] NAMES command
+3. Command Handling
+   - Process specific IRC commands
+   - Update server state (e.g., user information, channel memberships)
+   - Generate and send appropriate responses
 
-5. Channel Management
-   - [ ] Implement channel data structure
-   - [ ] Manage user joining and leaving channels
-   - [ ] Handle channel modes
+4. Client Disconnection
+   - Handle client disconnections (voluntary or due to errors)
+   - Clean up resources associated with disconnected clients
 
-6. Message Routing
-   - [ ] Implement message broadcasting to channels
-   - [ ] Handle private messages between users
+5. Server Shutdown
+   - Close all client connections
+   - Free allocated resources
+   - Close server socket
 
-7. Error Handling
-   - [ ] Implement proper error responses as per IRC protocol
-   - [ ] Handle edge cases and potential issues
+## Module Division and TODO List
 
-8. Configuration
-   - [ ] Implement server configuration (port, password)
-   - [ ] Optional: Configuration file support
+The project is divided into three main modules, each with its own set of tasks:
 
-9. Logging
-   - [ ] Implement server-side logging for debugging and monitoring
+### 1. Network and Client Management Module
 
-10. Testing
-    - [ ] Develop a comprehensive test suite
-    - [ ] Perform stress testing with multiple clients
+- [ ] Implement socket creation and binding
+- [ ] Set up listening for incoming connections
+- [ ] Implement non-blocking I/O using select() or poll()
+- [ ] Handle client connections (accept new clients)
+- [ ] Implement client data structure
+- [ ] Manage client connections and disconnections
+- [ ] Implement the main event loop
+- [ ] Handle multiple clients concurrently
+- [ ] Implement basic error handling and logging for network operations
 
-Bonus Tasks:
+### 2. Message Parsing and Command Handling Module
+
+- [ ] Implement IRC protocol message parser
+- [ ] Route messages to appropriate handlers
+- [ ] Implement NICK command
+- [ ] Implement USER command
+- [ ] Implement JOIN command
+- [ ] Implement PART command
+- [ ] Implement PRIVMSG command
+- [ ] Implement QUIT command
+- [ ] Implement MODE command
+- [ ] Implement TOPIC command
+- [ ] Implement LIST command
+- [ ] Implement NAMES command
+- [ ] Generate and format server responses
+- [ ] Implement error handling for invalid commands or parameters
+
+### 3. Channel and Server State Management Module
+
+- [ ] Implement channel data structure
+- [ ] Handle channel creation and deletion
+- [ ] Manage channel user lists
+- [ ] Implement server-wide state management (users, channels, etc.)
+- [ ] Handle client authentication
+- [ ] Manage client nickname and username changes
+- [ ] Integrate networking module for sending responses
+- [ ] Integrate command handling module for executing commands
+- [ ] Implement final error handling and logging system
+- [ ] Coordinate overall program flow
+- [ ] Implement server shutdown procedure
+
+### Additional Features (Optional, can be distributed among team members)
+
 - [ ] Implement file transfer functionality
-- [ ] Create a basic IRC bot
+- [ ] Create a bot interface
+
+
+[Contributing and License sections remain unchanged]
 
 ## Contributing
 

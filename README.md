@@ -142,10 +142,15 @@ The project is divided into three main modules, each with its own set of tasks:
    - [ ] Implement PART command
    - [ ] Implement MSG command
    - [ ] Implement QUIT command
-   - [ ] Implement MODE command
+   - [ ] Implement KICK command
+   - [ ] Implement INVITE command
    - [ ] Implement TOPIC command
-   - [ ] Implement LIST command
-   - [ ] Implement NAMES command
+   - [ ] Implement MODE command
+     - [ ] Implement -i flag
+     - [ ] Implement -t flag
+     - [ ] Implement -k flag
+     - [ ] Implement -o flag
+     - [ ] Implement -l flag
    - [ ] Generate and format server responses
    - [ ] Implement error handling for invalid commands or parameters
 

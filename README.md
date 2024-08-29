@@ -108,13 +108,13 @@ The project is divided into three main modules, each with its own set of tasks:
 
 ### 1. Network and Client Management Module
 
-1. **Socket Management and Initialization**
+- **Socket Management and Initialization**
    - [ ] Implement socket creation and binding
    - [ ] Set up listening for incoming connections
    - [ ] Set up non-blocking I/O using select() or poll()
    - [ ] Implement basic error handling and logging for network operations
 
-2. **Client Management**
+- **Client Management**
    - [ ] Implement client data structure
    - [ ] Handle client connections (accept new clients)
    - [ ] Manage client connections and disconnections
@@ -123,11 +123,11 @@ The project is divided into three main modules, each with its own set of tasks:
 
 ### 2. Message Parsing and Command Handling Module
 
-1. **Message Parsing**
+- **Message Parsing**
    - [ ] Implement IRC protocol message parser
    - [ ] Route messages to appropriate handlers
 
-2. **Command Handling**
+- **Command Handling**
    - [ ] Implement NICK command
    - [ ] Implement USER command
    - [ ] Implement JOIN command
@@ -143,12 +143,12 @@ The project is divided into three main modules, each with its own set of tasks:
 
 ### 3. Channel and Server State Management Module
 
-1. **Channel Management**
+- **Channel Management**
    - [ ] Implement channel data structure
    - [ ] Handle channel creation and deletion
    - [ ] Manage channel user lists
 
-2. **Server State Management**
+- **Server State Management**
    - [ ] Implement server-wide state management (users, channels, etc.)
    - [ ] Handle client authentication
    - [ ] Manage client nickname and username changes

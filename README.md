@@ -74,7 +74,7 @@ Usage examples:
 ```
 /NICK newNickname
 /JOIN #channel
-/PRIVMSG #channel :Hello, everyone!
+/MSG #channel :Hello, everyone!
 /PART #channel
 /QUIT :Goodbye!
 ```
@@ -171,7 +171,7 @@ The project is divided into three main modules, each with its own set of tasks:
    - [ ] Coordinate overall program flow
    - [ ] Implement server shutdown procedure
 
-### Additional Features (Optional, can be distributed among team members)
+### Bonus Features
 
 - [ ] Implement file transfer functionality
 - [ ] Create a bot interface

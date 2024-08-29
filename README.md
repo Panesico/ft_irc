@@ -169,4 +169,4 @@ This project is part of the 42 school curriculum. While contributions are not ex
 
 ## License
 
-This project is licensed under the GNU Affero General Public License v3.0 (AGPLv3) - see the [LICENSE](LICENSE) file for details. This license ensures that the code remains open source and that any modifications or distributions of the code also remain open source, in line with the 42 school philosophy.
+This project is licensed under the GNU Affero General Public License v3.0 (AGPLv3) - see the [LICENSE](LICENSE) file for details.

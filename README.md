@@ -7,7 +7,8 @@ An Internet Relay Chat (IRC) server implementation project developed as part of 
 - [Usage](#usage)
 - [Features](#features)
 - [IRC Commands](#irc-commands)
-- [TODO List](#todo-list)
+- [Program Flow](#program-flow)
+- [Module Division and TODO List](#module-division-and-todo-list)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -107,54 +108,60 @@ The project is divided into three main modules, each with its own set of tasks:
 
 ### 1. Network and Client Management Module
 
-- [ ] Implement socket creation and binding
-- [ ] Set up listening for incoming connections
-- [ ] Implement non-blocking I/O using select() or poll()
-- [ ] Handle client connections (accept new clients)
-- [ ] Implement client data structure
-- [ ] Manage client connections and disconnections
-- [ ] Implement the main event loop
-- [ ] Handle multiple clients concurrently
-- [ ] Implement basic error handling and logging for network operations
+1. **Socket Management and Initialization**
+   - [ ] Implement socket creation and binding
+   - [ ] Set up listening for incoming connections
+   - [ ] Set up non-blocking I/O using select() or poll()
+   - [ ] Implement basic error handling and logging for network operations
+
+2. **Client Management**
+   - [ ] Implement client data structure
+   - [ ] Handle client connections (accept new clients)
+   - [ ] Manage client connections and disconnections
+   - [ ] Handle multiple clients concurrently
+   - [ ] Implement the main event loop
 
 ### 2. Message Parsing and Command Handling Module
 
-- [ ] Implement IRC protocol message parser
-- [ ] Route messages to appropriate handlers
-- [ ] Implement NICK command
-- [ ] Implement USER command
-- [ ] Implement JOIN command
-- [ ] Implement PART command
-- [ ] Implement PRIVMSG command
-- [ ] Implement QUIT command
-- [ ] Implement MODE command
-- [ ] Implement TOPIC command
-- [ ] Implement LIST command
-- [ ] Implement NAMES command
-- [ ] Generate and format server responses
-- [ ] Implement error handling for invalid commands or parameters
+1. **Message Parsing**
+   - [ ] Implement IRC protocol message parser
+   - [ ] Route messages to appropriate handlers
+
+2. **Command Handling**
+   - [ ] Implement NICK command
+   - [ ] Implement USER command
+   - [ ] Implement JOIN command
+   - [ ] Implement PART command
+   - [ ] Implement PRIVMSG command
+   - [ ] Implement QUIT command
+   - [ ] Implement MODE command
+   - [ ] Implement TOPIC command
+   - [ ] Implement LIST command
+   - [ ] Implement NAMES command
+   - [ ] Generate and format server responses
+   - [ ] Implement error handling for invalid commands or parameters
 
 ### 3. Channel and Server State Management Module
 
-- [ ] Implement channel data structure
-- [ ] Handle channel creation and deletion
-- [ ] Manage channel user lists
-- [ ] Implement server-wide state management (users, channels, etc.)
-- [ ] Handle client authentication
-- [ ] Manage client nickname and username changes
-- [ ] Integrate networking module for sending responses
-- [ ] Integrate command handling module for executing commands
-- [ ] Implement final error handling and logging system
-- [ ] Coordinate overall program flow
-- [ ] Implement server shutdown procedure
+1. **Channel Management**
+   - [ ] Implement channel data structure
+   - [ ] Handle channel creation and deletion
+   - [ ] Manage channel user lists
+
+2. **Server State Management**
+   - [ ] Implement server-wide state management (users, channels, etc.)
+   - [ ] Handle client authentication
+   - [ ] Manage client nickname and username changes
+   - [ ] Integrate networking module for sending responses
+   - [ ] Integrate command handling module for executing commands
+   - [ ] Implement final error handling and logging system
+   - [ ] Coordinate overall program flow
+   - [ ] Implement server shutdown procedure
 
 ### Additional Features (Optional, can be distributed among team members)
 
 - [ ] Implement file transfer functionality
 - [ ] Create a bot interface
-
-
-[Contributing and License sections remain unchanged]
 
 ## Contributing
 

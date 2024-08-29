@@ -48,18 +48,26 @@ Bonus features (if implemented):
 
 ## IRC Commands
 
-The ft_irc server typically implements the following IRC commands:
+### General Commands
 
-1. `NICK`: Set or change nickname
-2. `USER`: Set username, hostname, and realname
-3. `JOIN`: Join a channel
-4. `PART`: Leave a channel
-5. `PRIVMSG`: Send a private message to a user or channel
-6. `QUIT`: Disconnect from the server
-7. `MODE`: Change user or channel modes
-8. `TOPIC`: View or set a channel topic
-9. `LIST`: List available channels
-10. `NAMES`: List users in a channel
+- **NICK**: Set or change nickname
+- **USER**: Set username, hostname, and realname
+- **JOIN**: Join a channel
+- **MSG**: Send a private message to a user or channel
+- **QUIT**: Disconnect from the server
+
+### Channel Operator Commands
+
+- **KICK**: Eject a client from the channel
+- **INVITE**: Invite a client to a channel
+- **TOPIC**: Change or view the channel topic
+- **MODE**: Change the channel’s mode
+  - **i**: Set/remove Invite-only channel
+  - **t**: Set/remove the restrictions of the TOPIC command to channel operators
+  - **k**: Set/remove the channel key (password)
+  - **o**: Give/take channel operator privilege
+  - **l**: Set/remove the user limit to the channel
+
 
 Usage examples:
 
@@ -132,7 +140,7 @@ The project is divided into three main modules, each with its own set of tasks:
    - [ ] Implement USER command
    - [ ] Implement JOIN command
    - [ ] Implement PART command
-   - [ ] Implement PRIVMSG command
+   - [ ] Implement MSG command
    - [ ] Implement QUIT command
    - [ ] Implement MODE command
    - [ ] Implement TOPIC command

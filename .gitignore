@@ -37,3 +37,6 @@ irc
 
 .vscode
 .idea
+*.dSYM
+*.dSYM/
+ircserv
